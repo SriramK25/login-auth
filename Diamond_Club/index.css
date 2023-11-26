@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body, .full-height, .pagination, .form {
+  display: flex; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif; }
+
+body {
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f5; }
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  border: 2px solid #474bff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s; }
+  .btn:hover {
+    background-color: #474bff;
+    color: #dbe4ff; }
+  .btn:disabled {
+    background-color: #ced4da;
+    color: #868e96;
+    border: 2px solid #ced4da;
+    cursor: not-allowed; }
+
+.pointer {
+  cursor: pointer;
+  transition: 0.2s; }
+  .pointer:hover {
+    background-color: rgba(59, 91, 219, 0.5); }
+
+.table {
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  outline: 2px solid #3b5bdb;
+  border-radius: 3px;
+  border-collapse: collapse;
+  width: 60vw;
+  max-width: 70rem;
+  margin-bottom: 3rem; }
+  .table-head--text {
+    background-color: #3b5bdb;
+    color: #e9ecef;
+    padding: 2rem; }
+  .table-row:nth-child(even) {
+    background-color: #dbe4ff; }
+  .table-data {
+    text-align: center;
+    padding: 1rem 2rem; }
+    .table-data:not(:last-child) {
+      border-right: 2px solid #3b5bdb; }
+
+.full-height {
+  height: 100vh;
+  align-items: center;
+  justify-content: center; }
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid #474bff;
+  animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear; }
+
+.pagination {
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding-inline: 2rem; }
+  .pagination-num {
+    font-weight: 600; }
+
+@keyframes spinner-bulqg1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%); }
+  12.5% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%); }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%); }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%); }
+  62.5% {
+    clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%); }
+  75% {
+    clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%); }
+  100% {
+    clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%); } }
+
+@keyframes spinner-oaa3wk {
+  0% {
+    transform: scaleY(1) rotate(0deg); }
+  49.99% {
+    transform: scaleY(1) rotate(135deg); }
+  50% {
+    transform: scaleY(-1) rotate(0deg); }
+  100% {
+    transform: scaleY(-1) rotate(-135deg); } }
+
+.home {
+  flex-direction: column;
+  gap: 3rem; }
+  .home-heading {
+    font-size: 3rem; }
+  .home-btn {
+    font-size: 1.4rem; }
+
+.login {
+  flex-direction: column;
+  gap: 4rem; }
+
+.form {
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  background-color: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  padding: 5rem 4rem 3rem 4rem;
+  border-radius: 1rem; }
+  .form-container {
+    position: relative; }
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-3.5rem);
+    transition: 0.2s;
+    font-size: 1rem;
+    visibility: visible; }
+  .form-input {
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid transparent;
+    outline: none;
+    background: #f1f3f5;
+    font-family: inherit;
+    font-size: 1.4rem;
+    transition: 0.2s; }
+    .form-input:focus, .form-input:active {
+      border: 1.5px solid #3b5bdb; }
+    .form-input:hover {
+      background-color: #ced4da; }
+  .form-btn {
+    margin-top: -1rem;
+    font-size: 1.3rem; }
+
+.form-input:placeholder-shown + .form-label {
+  visibility: hidden;
+  font-size: 1.4rem;
+  left: 5%;
+  transform: translateY(-50%); }
+
+.hint {
+  font-size: 1.4rem; }
+  .hint h3 {
+    margin-bottom: 1rem; }
+  .hint p {
+    margin-top: 1rem; }
+
+.error {
+  color: #f03e3e; }
+
+.logout-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500; }
+  .logout-btn:hover {
+    background-color: #f03e3e;
+    border: 2px solid #f03e3e; }
